@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        .product-grid {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        .product-grid:hover {
+            box-shadow: 0px 0px 14.85px .15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-grid .product-image {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-grid .product-image a.image {
+            display: block;
+        }
+
+        .product-grid .product-image img {
+            width: 100%;
+            height: auto;
+            transition: all .3s ease-in-out;
+        }
+
+        .product-grid .product-image:hover img {
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        .product-grid .product-sale-label {
+            color: #fff;
+            background: #d33;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: all .3s ease-in-out;
+        }
+
+        .product-grid .product-links {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+
+        .product-grid .product-links li {
+            margin: 0 0 10px;
+        }
+
+        .product-grid .product-links li a {
+            color: #161b1d;
+            background: #fff;
+            font-size: 16px;
+            text-align: center;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, .07);
+            transform: scale(0);
+            display: block;
+            transition: all .3s ease-in-out;
+        }
+
+        .product-grid:hover .product-links li a {
+            transform: scale(1);
+        }
+
+        .product-grid .product-links li a:hover {
+            color: #45ab49;
+        }
+
+        .product-grid .product-content {
+            background: #fff;
+            padding: 15px;
+        }
+
+        .product-grid .category {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin: 0 0 7px;
+            display: block;
+        }
+
+        .product-grid .category a {
+            color: #999;
+            transition: all 0.3s ease 0s;
+        }
+
+        .product-grid .category a:hover {
+            color: #161b1d;
+            text-decoration: underline;
+        }
+
+        .product-grid .title {
+            font-size: 17px;
+            font-weight: 600;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            margin: 0 0 7px;
+        }
+
+        .product-grid .title a {
+            color: #161b1d;
+            transition: all 0.3s ease 0s;
+        }
+
+        .product-grid .title a:hover {
+            color: #45ab49;
+        }
+
+        .product-grid .price {
+            color: #45ab49;
+            font-size: 17px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .product-grid .price span {
+            color: #999;
+            font-size: 15px;
+            font-weight: 400;
+            text-decoration: line-through;
+            margin: 0 5px 0 0;
+        }
+
+        @media screen and (max-width: 990px) {
+            .product-grid {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar  -->
+
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Demo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+
+
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+
+
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+
+
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+
+
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img src="images/Screenshot (82).png">
+                    </a>
+                    <span class="product-sale-label">sale</span>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <span class="category"><a href="#">Women's</a></span>
+                    <h3 class="title"><a href="#">Women's Top</a></h3>
+                    <div class="price"><span>$49.99</span> $29.99</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img src="images/Imrankhan.jpg">
+                    </a>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <span class="category"><a href="#">Men's</a></span>
+                    <h3 class="title"><a href="#">Men's T-Shirt</a></h3>
+                    <div class="price">$39.99</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

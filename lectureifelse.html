@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: teal;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <script>
+        var num = parseInt(prompt("enter your number "));
+
+        if (num % 2 == 0) {
+            document.write("even");
+
+
+        } else {
+            document.write("odd");
+
+        }
+
+
+
+
+
+
+
+        var eng = parseFloat(prompt("Enter your english marks"))
+        var urdu = parseFloat(prompt("Enter your urdu marks"))
+        var math = parseFloat(prompt("Enter your math marks"))
+
+
+        var obtainedMarks = eng + urdu + math;
+
+        var per = obtainedMarks / 300 * 100;
+
+
+
+        document.write(" Total Subjects Marks " + obtainedMarks+"<br>");
+        document.write("Percentage is " + per+"<br>")
+
+
+
+        if (per <= 100 && per >= 80) {
+
+
+            document.write("<h1> Grade A1</h1>"+"<br>")
+
+        }
+        else if (per <= 79 && per >= 70) {
+
+
+            document.write("Grade A"+"<br>")
+
+        } else if (per <= 69 && per >= 60) {
+
+
+            document.write("Grade B"+"<br>")
+
+        }
+        else if (per <= 59 && per >= 50) {
+
+
+            document.write("Grade C"+"<br>")
+
+        }
+        else if (per <= 49 && per >= 40) {
+
+
+            document.write("Grade D"+"<br>")
+
+        } else {
+            document.write("iqra men jaien"+"<br>")
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        /*
+                var age = 8;
+                if (age <= 18) {
+                    document.write("you are under age ");
+        
+                } else {
+        
+                    document.write("you are over age  ");
+        
+                }
+        
+        */
+
+
+
+
+
+
+
+        var eng = parseFloat(prompt("Enter Your Maths Marks"));
+        var math =parseFloat(prompt("Enter Your Maths Marks"));
+        var urdu =parseFloat(prompt("Enter Your  Marks"));
+
+
+        var total = eng + math + urdu;
+
+
+        var per = total / 300 * 100;
+
+
+        document.write("Total Obtained Marks " + total + "<br>");
+        document.write("percentage is  " + per + "<br>");
+
+
+
+
+        if (per <= 100 && per>= 80) {
+
+            document.write("Grade A1");
+
+
+        }
+
+        else if (per <= 79 && per >= 70) {
+
+            document.write("Grade A")
+
+
+        }
+
+        else if (per <= 69 && per >= 60) {
+
+            document.write("Grade B")
+
+
+        }
+        else if (per <= 59 && per >= 50) {
+
+            document.write("Grade C")
+
+
+        }
+        else if (per <= 49 && per >= 40) {
+
+            document.write("Grade D")
+
+
+        }else{
+
+            document.write("Grade Fail")
+
+        }
+        
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

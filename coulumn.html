@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <style>
+
+        .box{
+            background-color: rgb(229,148,43);
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        .box img{
+            width: 100%;
+            height: auto;
+            transform-origin: top left;
+            transform: scale(1.3);
+            transition: all 0.6s ease-out 0s;
+        }
+        .box:hover img{
+            opacity: 0.7;
+            transform-origin: bottom right;
+        }
+        .box-content{
+            color:#fff;
+            background-color: rgba(229,148,43,0.9);
+            padding: 20px;
+            opacity: 0;
+            position: absolute;
+            bottom: -50%;
+            right: -50%;
+            z-index: 2;
+            transition: all 0.6s ease-out;
+        }
+        .box:hover .box-content{
+            opacity: 1;
+            bottom: 0;
+            right: 0;
+        }
+        .box .title{
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 0 0 3px;
+        }
+        .box .post{
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+            display: block;
+        }
+        .box .icon{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            transform-origin: right center;
+            transform: scaleY(0);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            transition: all 0.6s ease 0.2s;
+        }
+        .box:hover .icon{ transform: scaleY(1); }
+        .box .icon li{ margin: 0 0 5px; }
+        .box .icon li a{
+            color: #fff;
+            background-color: rgb(229,148,43);
+            font-size: 15px;
+            line-height: 34px;
+            width: 34px;
+            height: 34px;
+            display: block;
+            transition: all 0.35s;
+        }
+        .box .icon li a:hover{
+            color: #fff;
+            background: rgb(229,148,43);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        @media only screen and (max-width:990px){
+            .box{ margin: 0 0 30px; }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class=" container " style=" margin-top: 100px">
+
+        <div class="row">
+
+
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/Screenshot (82).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4  col-sm-12 ">
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/Screenshot (83).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4  col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/Screenshot (84).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4  col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/Screenshot (84).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <img src="images/Screenshot (82).png">
+                    <div class="box-content">
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <img src="images/Screenshot (83).png">
+                    <div class="box-content">
+                        <h3 class="title">Miranda Roy</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <img src="images/Screenshot (83).png">
+                    <div class="box-content">
+                        <h3 class="title">Miranda Roy</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
